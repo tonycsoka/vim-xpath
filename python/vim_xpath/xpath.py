@@ -157,7 +157,7 @@ def _output_value(match):
 def _prefixed_name_from_absolute_name(name, namespaces):
     """Convert an lxml {namespaceuri}Name to prefix:Name,
     with prefixes defined in the namespaces dictionary"""
-    regex_match = re.search("^\{(.*)\}", name)
+    regex_match = re.search(r"^\{(.*)\}", name)
     if regex_match:
         uri = regex_match.group(1)
         uri_with_braces = regex_match.group(0)
